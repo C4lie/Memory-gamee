@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <title>Memory Card Game</title>
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="game-header">
+      <h1>Memory Card Game</h1>
+      <div class="controls">
+        <!-- Theme Selection Dropdown -->
+        <label for="theme-select">Select Theme:</label>
+        <select id="theme-select">
+          <option value="animals">Animals</option>
+          <option value="superheroes">Superheroes</option>
+          <option value="flags">Flags</option>
+        </select>
+
+        <!-- New Game Button -->
+        <button id="new-game">New Game</button>
+
+        <!-- Power-Ups: Peek and Undo -->
+        <button
+          id="peek"
+          class="power-up"
+        >
+          Peek
+        </button>
+        <button
+          id="undo"
+          class="power-up"
+        >
+          Undo
+        </button>
+
+        <!-- Hint Button -->
+        <button
+          id="hint"
+          class="power-up"
+        >
+          Hint
+        </button>
+      </div>
+    </header>
+
+    <!-- Timer and Score Section -->
+    <div class="status">
+      <div class="timer">
+        <label>Time Left:</label>
+        <progress
+          id="time-bar"
+          value="100"
+          max="100"
+        ></progress>
+        <span id="time-left">60s</span>
+      </div>
+      <div class="moves">
+        <label>Moves:</label>
+        <span id="move-count">0</span>
+      </div>
+    </div>
+
+    <!-- Game Grid -->
+    <div
+      class="game-grid"
+      id="game-board"
+    >
+      <!-- Cards will be dynamically inserted here by JavaScript -->
+    </div>
+
+    <!-- Pop-Up Modal -->
+    <div
+      id="popup"
+      class="popup hidden"
+    >
+      <div class="popup-content">
+        <h2 id="popup-message"></h2>
+        <button id="restart-game">Restart Game</button>
+        <button id="new-game-popup">New Game</button>
+      </div>
+    </div>
+
+    <!-- Congratulations Message -->
+    <div
+      id="congratulations"
+      class="congratulations hidden"
+    >
+      <h2>Congratulations! You Won!</h2>
+      <button id="play-again">Play Again</button>
+    </div>
+
+    <!-- Link to JavaScript File -->
+    <script src="script.js"></script>
+  </body>
+</html>
